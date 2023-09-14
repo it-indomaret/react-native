@@ -71,6 +71,7 @@ class FrameBasedAnimationDriver extends AnimationDriver {
     int frameIndex = (int) Math.round(timeFromStartMillis / FRAME_TIME_MILLIS);
     if (frameIndex < 0) {
       // throw new IllegalStateException("Calculated frame index should never be lower than 0");
+      return;
     } else if (mHasFinished) {
       // nothing to do here
       return;
